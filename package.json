@@ -1,5 +1,4 @@
 {
-  "name": "sc-autodoc",
-  "version": "0.1.0",
-  "required": ["smartdown", "spawn"]
+  "name": "sc_autodoc",
+  "version": "0.1.0"
 }
