@@ -10,10 +10,8 @@ mp.exec = function(queue, responder) {
   // if params are strings, make into an array 
   if ('string' === typeof queue) {
     queue = Array.prototype.slice.call(arguments);
-    done = null;
+    responder = null;
   }
-  
-  if (!responder) responder = function(err, stdout, stderr) {};
   
   return function(done) {
     var running_count = 0;
@@ -23,7 +21,7 @@ mp.exec = function(queue, responder) {
       running_count ++;
       var result = sys.exec(entry, function(err, stdout, stderr) {
         try {
-          responder(err, stdout, stderr);
+          if (responder) responder(err, stdout, stderr);
         } catch (e) {
           sys.puts("Error in responder: " + entry);
         }

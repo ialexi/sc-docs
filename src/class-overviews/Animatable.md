@@ -10,14 +10,14 @@ Adding the Framework
 --------------------
 SC.Animatable lives in SproutCore's "animation" framework. This framework is _opt-in_, so you
 have to explicitly include it. If you've never included another framework before, then you can
-just replace the ":required => :sproutcore" in your Buildfile with the following. If you
+just replace the `#ruby::required => :sproutcore"` in your Buildfile with the following. If you
 _have_ included another framework before, you'll probably understand what the following
 means and be able to do the same thing:
 
     #ruby
     :required => [:sproutcore, :"sproutcore/animation"]
 
-For more, see "Frameworks" in the introduction overviews.
+For more, see [Frameworks](../intro-overviews/frameworks.html) in the introduction overviews.
 
 
 How it works
@@ -26,11 +26,10 @@ Roughly:
 
 - You mix in SC.Animatable
 - You set up transitions
-- You call adjust() or set("layout")
+- You call `#js:adjust()` or `#js:set("layout")`
 - IT'S ALIVE!
 
-Some rough reference docs for SC.Animatable are here:
-http://create.tpsitulsa.com/static/docs/symbols/SC.Animatable.html
+Some rough reference docs for SC.Animatable [are available here](http://create.tpsitulsa.com/static/docs/symbols/SC.Animatable.html).
 
 Mixing It In
 ------------
@@ -43,7 +42,7 @@ Mixing things in is easy—just add the mixin into your design or extend call:
 
 Setting up transitions
 ----------------------
-To set up transitions, you define a "transitions" hash on the view:
+To set up transitions, you define a `#js:transitions`` hash on the view:
 
     #js
     view: SC.View.design(SC.Animatable, {
@@ -73,7 +72,7 @@ be called, that's fine:
     }
 
 But if you need to call an action on some non-singleton, things will be trickier: you need the transition to reference
-"this", but "this" is not available at load-time, when the transitions hash is loaded in JavaScript.
+`#js:this`, but `#js:this` is not available at load-time, when the transitions hash is loaded in JavaScript.
 
 Instead, you'll have to set up that particular transition in init:
 

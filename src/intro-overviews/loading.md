@@ -20,22 +20,23 @@ As long as any code referencing something declared in another file runs at run-t
 everything will work. However, if the code runs at load-time, problems could occur because of the order in
 which the JS is loaded. If you try to use My.SpecialView before it has been declared, there will be trouble.
 
-But what if you subclass SC.View, creating My.SpecialView in one file (perhaps in views/my_special.js),
-and then try to call My.SpecialView.design() to create an instance in your resources/main_page.js file? 
+But what if you subclass SC.View, creating My.SpecialView in one file (perhaps in views/my\_special.js),
+and then try to call `#js:My.SpecialView.design()` to create an instance in your resources/main\_page.js file? 
 Well, you might run into trouble.
 
-How to fix? Add a require() statement to the top of your main_page.js:
+How to fix? Add a `#js:require()` statement to the top of your main_page.js:
 
+    #js
     require("views/my_special.js");
 
-This will tell SproutCore's build tools that views/my_special.js needs to be included in the combined JS
+This will tell SproutCore's build tools that views/my\_special.js needs to be included in the combined JS
 _before_ main_page.js.
 
 And that's it!
 
 Frameworks
 ==========
-Frameworks are loaded as defined in Buildfiles. For more on frameworks, see "Frameworks".
+Frameworks are loaded as defined in Buildfiles. For more on frameworks, see [Frameworks](frameworks.html).
 
 Cross-framework Requires
 ------------------------
@@ -49,8 +50,9 @@ Load-time vs. Run-time
 ======================
 If you think about JavaScript for a bit, you'll be able to tell what is load-time and what is run-time.
 
-Let's take a look at the following code:
+Here's an example:
 
+    #js
     // ==========================================================================
     // Project:   MyApp - mainPage
     // Copyright: ©2010 My Company, Inc.
@@ -70,11 +72,11 @@ Let's take a look at the following code:
         }),
         
         myOtherView: SC.LabelView.design({
-          valueBinding: "MyApp.controller", // this won't be processed until the object is created
+          valueBinding: "MyApp.controller", // this won't be processed until the object is created (it is in quotes; code has to render)
           
           // this function is created at load time
           somethingWeird: function() {
-            // but isn't run until it is called. At run time.
+            // but isn't run until the function is called. At run time.
             var x = MyApp.SomeOtherView.create();
           }
         })

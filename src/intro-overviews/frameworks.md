@@ -29,6 +29,7 @@ For instance, they can tell SproutCore which frameworks are required by which ap
 
 Here's an example entry that "requires" a couple SproutCore frameworks:
 
+    #ruby
     config :all, :required => [:sproutcore, :"sproutcore/animation"]
 
 This code is actually Ruby code. The command "config" takes multiple arguments: the first is what to configure—
@@ -40,7 +41,8 @@ Why?
 
 Because somewhere, buried in SproutCore's own master Buildfile, is something which equates to the following:
 
-  config :all, :required => [:runtime, :foundation, :desktop]
+    #ruby
+    config :all, :required => [:runtime, :foundation, :desktop]
 
 Since you are requiring the "sproutcore" framework, which already requires these, you have no need to
 require them yourself. Only "sproutcore/animation" must be required manually, because it is an optional
