@@ -5,11 +5,8 @@ a page like an HTML page. Instead, they are merely view containers.
 
 So, what's so special about them? Why not make them just be an SC.Object?
 
-Well, if you look at the source, you will find that SC.Pages are, in fact, SC.Objects:
-
-http://github.com/sproutit/sproutcore/blob/master/frameworks/foundation/system/page.js
-
-The only difference is that they instantiate their child objects on demand.
+Well, if you [look at the source](http://github.com/sproutit/sproutcore/blob/master/frameworks/foundation/system/page.js), 
+you will find that SC.Pages are, in fact, SC.Objects. The only difference is that they instantiate their child objects on demand.
 
 Notice how you use .design() to declare the objects in your mainPage? .design() does not create
 a view instance. Rather, it simply subclasses a view. .design() is rather equivalent to .extend(),
