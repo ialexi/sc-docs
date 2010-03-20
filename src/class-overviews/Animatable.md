@@ -14,6 +14,7 @@ just replace the ":required => :sproutcore" in your Buildfile with the following
 _have_ included another framework before, you'll probably understand what the following
 means and be able to do the same thing:
 
+    #ruby
     :required => [:sproutcore, :"sproutcore/animation"]
 
 For more, see "Frameworks" in the introduction overviews.
@@ -35,6 +36,7 @@ Mixing It In
 ------------
 Mixing things in is easy—just add the mixin into your design or extend call:
 
+    #js
     view: SC.View.design(SC.Animatable, {
       // my usual settings here
     })
@@ -43,6 +45,7 @@ Setting up transitions
 ----------------------
 To set up transitions, you define a "transitions" hash on the view:
 
+    #js
     view: SC.View.design(SC.Animatable, {
       transitions: {
         "left": .25, // left should animate for .25 seconds
@@ -60,6 +63,7 @@ Callbacks
 Callbacks are a bit tricky. Why? Because they require a "target" for the callback. If you want a controller to
 be called, that's fine:
 
+    #js
     transitions: {
       "left": {
         duration: .25,
@@ -73,6 +77,7 @@ But if you need to call an action on some non-singleton, things will be trickier
 
 Instead, you'll have to set up that particular transition in init:
 
+    #js
     init: function() {
       sc_super(); // call original init
       this.transitions.left = {
