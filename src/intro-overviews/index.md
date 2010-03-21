@@ -7,6 +7,7 @@ SproutCore Apps
 --------------------
 - [Load Process](loading.html)
 - [Frameworks](frameworks.html)
+- [Themes](themes.html)
 
 Objects
 -------
