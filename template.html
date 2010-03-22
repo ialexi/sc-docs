@@ -4,10 +4,16 @@
     %meta{http-equiv: 'Content-Type' content: 'text/html; charset=utf-8'}
     :css
       body {
+        font-family: "Lucida Sans", "Lucida Grande", Verdana, Arial, sans-serif;
         margin: 0px;
+        margin-bottom:1em;
         font-family: sans-serif;
+        font-size: 10px;
+        line-height:1.2;
       }
-
+      
+      .content { font-size: 14px; }
+      
       code {
         font-family: Monaco, Inconsolata, Courier, fixed-width;
         font-size: 12px;
@@ -17,37 +23,73 @@
         margin-right: 1em;
         border: 1px solid #a0b0a0;
         overflow: auto;
-        background: #e0e9e0;
+        background: #f5f9f5;
         display:block;
         padding: 1em;
       }
       
+      a { text-decoration: none; color: rgb(50, 50, 155); }
+      
+      
       .header {
         background-color: rgb(38, 43, 50);
-        height: 100px;
+        height: 60px;
+        padding-top:17px;
+        padding-bottom:17px;
+        padding-left:2em;
       }
       
+      .header a.img {
+        float: left;
+      }
+
+      .header .here {
+        float:left;
+        margin-top:27px;
+        margin-left:5px;
+        color: rgb(200, 255, 200);
+        font-size: 25px;
+      }
+
+      .header span.here {
+        margin-top:34px;
+        font-size:15px;
+        color: white;
+      }
+
+      .header a.item {
+        float:right;
+        margin-top: 34px;
+        margin-right:10px;
+        color: white;
+        font-size:15px;
+      }
+
+      .header a.item:hover {
+        text-decoration: underline;
+      }
+            
       .content {
         padding-top: 1em;
         padding-left: 2em;
         padding-right: 2em;
       }
       
-      .header h1 { font-size: 2em; padding: 17px; font-weight: normal }
-      .header h1 img {}
+      
       h1, h2, h3 { color: rgb(100, 155, 100); }
       
       code .class { color: rgb(0, 0, 150); }
-      code .variable { color: rgb(10, 70, 10); }
-      code .comment { color: rgb(0, 100, 255); }
+      /*code .variable { color: rgb(10, 70, 10); }*/
+      code .comment { color: rgb(100, 150, 200); }
       code .string { color: rgb(0, 100, 10); }
       code .number { color: rgb(0, 0, 255); }
-      code .keyword, code .this { color: rgb(0, 0, 255); font-weight: bold; }
+      code .keyword, code .this { color: rgb(25, 110, 25); font-weight: bold; }
   %body
     .header
-      %h1
-        %a{ href: static_url('index.html') }
-          %img{ src: static_url('resources/logo.png') }
+      %a.img{ href: static_url('index.html') }
+        %img{ src: static_url('resources/logo.png') }
+      %a.here{href:static_url('index.html')} Documentation
+      %a.item{href:static_url('reference/index.html')} SproutCore Reference
     .content
       = this.contents
     .footer

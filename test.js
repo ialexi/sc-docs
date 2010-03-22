@@ -7,6 +7,8 @@
 
 /*jslint evil:true */
 
+SC = {};
+
 // Constants
 SC.TOGGLE_BEHAVIOR = 'toggle';
 SC.PUSH_BEHAVIOR =   'push';

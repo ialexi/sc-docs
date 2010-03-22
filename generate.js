@@ -30,29 +30,3 @@ fs.glob("src", /.*\.md/, function(err, paths) {
     sys.print("\nFinished in " + (time / 1000) + " seconds.                                           \n");
   });
 });
-
-
-/* Maybe we could do some jsdoc stuff here?
-
-
-var Parser = require("jsdocs:jsdocs/parser").Parser;
-var TokenReader = require("jsdocs:jsdocs/token-reader").TokenReader;
-var TokenStream = require("jsdocs:jsdocs/token").TokenStream;
-var TextStream = require("jsdocs:jsdocs/text-stream").TextStream;
-
-var parser = new Parser({});
-var tr = new TokenReader();
-var ts = new TokenStream(tr.tokenize(new TextStream(fs.readFile("test.js"))));
-parser.parse(ts, "test.js");
-
-var symbols = parser.symbols;
-parser.finish();
-var keys = symbols.keys();
-for (var i = 0; i < keys.length; i++) {
-  var symbol = symbols.getSymbol(keys[i]);
-  sys.puts(sys.inspect(symbol));
-};
-
-
-
-*/
