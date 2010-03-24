@@ -1,8 +1,8 @@
 Ace 2.0 Contributors' Guide
 ===========================
 
-Ace 2.0 is a work-in-progress. You may contribute by (in order of difficulty, 
-and inverse order of how helpful it would be :):
+Ace 2.0 is a work-in-progress. You may contribute by (in ascending order of difficulty, 
+and how helpful it would be :):
 
 - Creating art for unthemed controls
 - Creating CSS to theme controls
