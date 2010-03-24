@@ -12,6 +12,7 @@ SproutCore Apps
 Objects
 -------
 - [Create, Extend, Design](objects/create-extend-design.html)
+- [Using Computed Properties](objects/computed-properties.html)
 
 Views
 -----
