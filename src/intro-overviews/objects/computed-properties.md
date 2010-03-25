@@ -152,9 +152,11 @@ Obviously, this is not the result we were looking for.  There are two ways to l
 
 1.  Manually notify SproutCore by calling `#js:contact.notifyPropertyChange('fullName')`, or, preferably,
 
-2.  Tell SproutCore that `#js:firstName` and `#js:lastName` are dependent properties, like so:
+2.  Tell SproutCore that `#js:firstName` and `#js:lastName` are dependent properties.
 
-\
+
+For Example:
+ 
     #js
     fullName: function(key, value) {
       if (value !== undefined) {
