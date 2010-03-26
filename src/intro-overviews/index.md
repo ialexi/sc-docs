@@ -7,6 +7,8 @@ Basics
 -------
 - [Introducing SproutCore](basics/introducing-sproutcore.html)
 - [Quick Tour: Building a SproutCore App](basics/building-quick-tour.html)
+- [Architecture Overview](basics/architecture-overview.html)
+- [SproutCore Design Patterns](basics/design-patterns.html)
 
 SproutCore Apps
 --------------------
