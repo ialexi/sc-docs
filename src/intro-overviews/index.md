@@ -3,6 +3,11 @@ Introductory Overviews
 This section contains basic introductory overviews for SproutCore.
 They are more high-level discussion than they are examples and code.
 
+Basics
+-------
+- [Introducing SproutCore](basics/introducing-sproutcore.html)
+- [Quick Tour: Building a SproutCore App](basics/building-quick-tour.html)
+
 SproutCore Apps
 --------------------
 - [Load Process](loading.html)

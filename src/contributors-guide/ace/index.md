@@ -48,3 +48,9 @@ each other. To fix this, Ace has its own renderer that renders something more li
 
 All of SproutCore's controls should eventually be converted to use renderers. Please
 help by doing so–even if you only make a renderer for empty\_theme.
+
+Renderer documentation:
+
+- [SC.Renderer Class Overview](../../class-overviews/Renderer.html)
+- [SC.Renderer Reference](../../reference/symbols/SC.Renderer.html#constructor)
+- [Case: Segmented Renderer](example-renderer.html)
