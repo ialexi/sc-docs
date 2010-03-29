@@ -4,6 +4,8 @@ SproutCore applications are designed around the Model-View-Controller pattern. T
 paradigm is a long standing pattern in desktop applications; it helps you break your code
 into layers that are easier to maintain over time.
 
+![Architecture Graphic](architecture.png "SproutCore App Architecture")
+
 Models
 ------
 Models implement the business logic of your application. This is where you define things
